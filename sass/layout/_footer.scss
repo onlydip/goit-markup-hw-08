@@ -9,7 +9,7 @@
   }
 }
 
-.footer-list__item {
+.footer__item {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -28,10 +28,10 @@
   letter-spacing: 0.03em;
   color: var(--main-title-color);
 }
-.footer-list__mail-item {
+.footer__mail-item {
   margin-bottom: 9px;
 }
-.footer-list__mail {
+.footer__mail {
   color: var(--second-text-color);
   display: inline-block;
   transition: color var(--ms--cubic);
@@ -41,7 +41,7 @@
   }
 }
 
-.footer-list__tel {
+.footer__tel {
   color: var(--second-text-color);
   transition: color var(--ms--cubic);
   &:hover,
@@ -54,7 +54,7 @@
   display: flex;
 }
 
-.footer-social-list__item {
+.footer-social__item {
   width: 44px;
   height: 44px;
   & + & {
@@ -79,7 +79,7 @@
   margin-bottom: 20px;
 }
 
-.footer-social-list__link {
+.footer-social__link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -95,6 +95,6 @@
   }
 }
 
-.footer-social-list__icon {
+.footer-social__icon {
   fill: currentColor;
 }

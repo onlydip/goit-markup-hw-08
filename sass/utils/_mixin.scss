@@ -1,0 +1,53 @@
+@mixin transition($one, $two, $three, $time, $func) {
+  transition-property: $one, $two, $three;
+  transition-duration: $time;
+  transition-timing-function: $func;
+}
+
+@mixin section($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
+@mixin font($ff, $fs, $fw, $lh, $ls, $color, $tt, $td) {
+  font-family: $ff;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $color;
+  text-transform: $tt;
+  text-decoration: $td;
+}
+@mixin flex($display, $fd, $fw, $jc, $ai) {
+  display: $display;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin list($display, $fw, $mr, $mb, $ml, $mt, $m) {
+  display: $display;
+  flex-wrap: $fw;
+  margin-right: $mr;
+  margin-bottom: $mb;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin: $m;
+}
+
+@mixin item($mr, $mb, $ml, $mt, $m, $q, $gap) {
+  margin-right: $mr;
+  margin-bottom: $mb;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin: $m;
+  flex-basis: calc(100% / #{$q} - #{$gap});
+}
+@mixin item-two($mr, $mb, $ml, $mt, $m, $q, $gap) {
+  margin-right: $mr;
+  margin-bottom: $mb;
+  margin-left: $ml;
+  margin-top: $mt;
+  margin: $m;
+  flex-basis: calc(100% - #{$q} / #{$gap});
+}

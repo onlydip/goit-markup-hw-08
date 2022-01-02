@@ -4,10 +4,19 @@
   align-items: center;
   justify-content: center;
   border-radius: 4px;
-  width: 270px;
+
   height: 120px;
   background: var(--aftermain-color);
   color: var(--social-icon);
+  @media screen and (min-widht: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-widht: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-widht: 1200px) {
+    width: 270px;
+  }
 }
 
 .hang-list__svg-item {
@@ -17,35 +26,61 @@
 }
 
 .hang-list {
-  display: flex;
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    margin-bottom: 0;
+  }
 }
 
 .hang-list__item {
-  margin-right: 30px;
-  &:last-child {
-    margin-right: 0px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-bottom: 0;
   }
 }
 
 .hang-list__title {
   font-weight: 700;
+  text-align: center;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-tittle-color);
   margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
+
 .hang-list__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--first-text-color);
-  width: 270px;
-  height: 75px;
 }
 
 .hang {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }

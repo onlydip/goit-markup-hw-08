@@ -17,13 +17,13 @@
   margin-right: -30px;
   margin-bottom: -30px;
 }
-.main-list__item {
+.main__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   margin-bottom: 30px;
   position: relative;
 }
-.main-list__text {
+.main__text {
   position: absolute;
   bottom: 0;
   left: 0;
