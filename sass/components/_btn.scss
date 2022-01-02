@@ -1,0 +1,37 @@
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+  background: var(--main-button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 32px 10px 32px;
+  display: block;
+  margin: auto;
+  min-width: 200px;
+  transition: background-color var(--ms--cubic), border-radius var(--ms--cubic),
+    box-shadow var(--ms--cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--button-color);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.mains-btn {
+  font-family: inherit;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 6px 22px 6px 22px;
+}
