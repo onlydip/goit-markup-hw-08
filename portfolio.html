@@ -26,12 +26,10 @@
     <!-- Шапка страницы -->
     <header class="header">
       <div class="container header-container">
+        <a class="header-logo logos link" href="./index.html"
+          >Web<span class="header-logos logos link">Studio</span></a
+        >
         <nav class="header-nav">
-          <!-- Логотип компании -->
-          <a class="header-logo logos link" href="./index.html"
-            >Web<span class="header-logos logos link">Studio</span></a
-          >
-          <!-- Основные страницы сайта-->
           <ul class="header-list list">
             <li class="header-list__item">
               <a class="header-list__link links link" href="./index.html">Студия</a>
@@ -47,7 +45,7 @@
 
         <ul class="header-contacts list">
           <li class="header-contacts__item">
-            <a class="header-contacts__mail links link" href="mailto:info@devstudio.com">
+            <a class="contacts__item link-one link" href="mailto:info@devstudio.com">
               <svg class="header-social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
@@ -56,7 +54,7 @@
           </li>
 
           <li class="header-contacts__item">
-            <a class="header-contacts__tel links link" href="tel:+380961111111"
+            <a class="contacts__item link-two link" href="tel:+380961111111"
               ><svg class="header-social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-telephone"></use>
               </svg>
@@ -64,6 +62,75 @@
             >
           </li>
         </ul>
+        <button
+          class="mob-menu__btn mob-menu__btn--open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="open-btn__svg" width="20" height="20" aria-label="Мобильное меню">
+            <use
+              class="open-btn_icon mob-menu__icon"
+              href="./images/menu-icon/symbol-defs.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+        <div class="mob-menu__container js-menu-container" id="mobile-menu">
+          <div class="mobile__container">
+            <button class="mob-menu__btn mob-menu__btn--close js-close-menu">
+              <svg class="close-btn__svg" width="20" height="20">
+                <use
+                  class="close-btn__icon mob-menu__icon"
+                  href="./images/menu-icon/symbol-defs.svg#icon-menu"
+                ></use>
+              </svg>
+            </button>
+            <div class="mob-menu__box">
+              <ul class="mob-navigation__list list">
+                <li class="mob-navigation__item">
+                  <a class="mob-navigation__link link" href="./index.html">Студия</a>
+                </li>
+                <li class="mob-navigation__item">
+                  <a
+                    class="mob-navigation__link mob-navigation__link--current"
+                    href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mob-navigation__item">
+                  <a class="mob-navigation__link" href="">Контакты</a>
+                </li>
+              </ul>
+              <div class="mob-menu__contacts">
+                <ul class="mob-contact__list list">
+                  <li class="mob-contact__item">
+                    <a class="mob-contact__link mob-contact__link--color" href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                  <li class="mob-contact__item">
+                    <a class="mob-contact__link" href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="mob-social__list list">
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">Instagram</a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">Twitter</a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">Facebook</a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Главный контент страницы-->
@@ -93,7 +160,35 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img8.jpg" alt="Постер New Orlean vs Golden Star" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio1.jpg            1x,
+                        ./images/portfolio/portfolio1-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio1-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio1-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio1-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio1-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio1.jpg"
+                      alt="Ноутбук"
+                      class="card__image"
+                    />
+                  </picture>
+
                   <p class="portfolio-list__top-text">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -110,7 +205,34 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img9.jpg" alt="Постер New Orlean vs Golden Star" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio2.jpg            1x,
+                        ./images/portfolio/portfolio2-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio2-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio2-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio2-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio2-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio2.jpg"
+                      alt="Баскетболист"
+                      class="card__image"
+                    />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -126,7 +248,30 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img10.jpg" alt="Ресторан Seafood" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio3.jpg            1x,
+                        ./images/portfolio/portfolio3-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio3-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio3-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio3-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio3-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img src="./images/portfolio/portfolio3.jpg" alt="Постер" class="card__image" />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -142,7 +287,34 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img11.jpg" alt="Проект Prime" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio4.jpg            1x,
+                        ./images/portfolio/portfolio4-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio4-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio4-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio4-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio4-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio4.jpg"
+                      alt="Наушники"
+                      class="card__image"
+                    />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -159,7 +331,34 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img12.jpg" alt="Проект Boxes" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio5.jpg            1x,
+                        ./images/portfolio/portfolio5-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio5-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio5-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio5-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio5-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio5.jpg"
+                      alt="Коробки"
+                      class="card__image"
+                    />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -176,7 +375,34 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img13.jpg" alt="Inspiration has no Borders" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio6.jpg            1x,
+                        ./images/portfolio/portfolio6-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio6-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio6-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio6-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio6-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio6.jpg"
+                      alt="Монитор"
+                      class="card__image"
+                    />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -193,7 +419,30 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img14.jpg" alt="Издание Limited Edition" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio7.jpg            1x,
+                        ./images/portfolio/portfolio7-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio7-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio7-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio7-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio7-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img src="./images/portfolio/portfolio7.jpg" alt="Книга" class="card__image" />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -210,7 +459,34 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img15.jpg" alt="Проект LAB" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio8.jpg            1x,
+                        ./images/portfolio/portfolio8-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio8-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio8-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio8-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio8-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio8.jpg"
+                      alt="Бейджик"
+                      class="card__image"
+                    />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -226,7 +502,34 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link link">
                 <div class="portfolio-list__wrap">
-                  <img src="./images/img16.jpg" alt="Growing Business" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio9.jpg            1x,
+                        ./images/portfolio/portfolio9-desktop@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio9-tablet@1x.jpg 1x,
+                        ./images/portfolio/portfolio9-tablet@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio9-mob@1x.jpg 1x,
+                        ./images/portfolio/portfolio9-mob@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio9.jpg"
+                      alt="Ноутбук"
+                      class="card__image"
+                    />
+                  </picture>
                   <p class="portfolio-list__top-text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus rem
                     placeat voluptatum quam. Eum earum adipisci, facere totam inventore accusantium
@@ -246,84 +549,92 @@
     <!-- Подвал сайта-->
     <footer class="footer">
       <div class="container">
-        <div class="contact-information">
-          <a class="header-logo-footer logos link" href="./index.html"
-            >Web<span class="footer-logos logos link">Studio</span></a
-          >
-          <address class="adress">
-            <ul class="footer-list list">
-              <li class="footer-list__item">г. Киев, пр-т Леси Украинки, 26</li>
+        <div class="footer__mob-tab">
+          <div class="contact-information">
+            <a class="header-logo-footer logos link" href="./index.html"
+              >Web<span class="footer-logos logos link">Studio</span></a
+            >
+            <address class="adress">
+              <ul class="footer-list list">
+                <li class="footer__item">г. Киев, пр-т Леси Украинки, 26</li>
 
-              <li class="footer-list__mail-item">
-                <a class="footer-list__mail footer-links link" href="mailto:info@example.com"
-                  >info@example.com</a
-                >
+                <li class="footer__mail-item">
+                  <a class="footer__contact footer-links link" href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__mail-item">
+                  <a class="footer__contact footer-links link" href="tel:+380991111111"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-adress-social">
+            <p class="footer-social-title">Присоединяйтесь</p>
+            <ul class="footer-social-list list">
+              <li class="footer-social__item">
+                <a href="" class="footer-social__link">
+                  <svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                <a class="footer-list__tel footer-links link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
+              <li class="footer-social__item">
+                <a href="" class="footer-social__link"
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a href="" class="footer-social__link"
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a href="" class="footer-social__link"
+                  ><svg class="footer-social__icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-adress-social">
-          <p class="footer-social-title">Присоединяйтесь</p>
-          <ul class="footer-social-list list">
-            <li class="footer-social-list__item">
-              <a href="" class="footer-social-list__link">
-                <svg class="footer-social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-list__item">
-              <a href="" class="footer-social-list__link"
-                ><svg class="footer-social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-list__item">
-              <a href="" class="footer-social-list__link"
-                ><svg class="footer-social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-social-list__item">
-              <a href="" class="footer-social-list__link"
-                ><svg class="footer-social-list__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="modal-adress-social">
-          <p class="footer-social-title">Подпишитесь на рассылку</p>
-          <form action="#" class="modal-form">
+          <form action="#" class="sign-up__form">
             <div class="modal-form-field-email">
-              <label for="user-email" class="modal-input-text-email">
-                <input
-                  type="email"
-                  name="user-email"
-                  class="modal-input-email"
-                  placeholder="E-mail"
-                  id="user-email"
-                  required="required"
-                />
-              </label>
+              <!--   <p class="footer-social-title"></p> -->
 
-              <button type="submit" class="btn-input modal-btn">
-                Подписаться<svg class="input-btn-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
+              <label for="user-email" class="footer-social-title"> Подпишитесь на рассылку</label>
+              <input
+                type="email"
+                name="user-email"
+                class="modal-input-email"
+                placeholder="E-mail"
+                id="user-email"
+                required="required"
+              />
             </div>
+            <button type="submit" class="btn-input modal-btn">
+              Подписаться<svg class="input-btn-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

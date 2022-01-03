@@ -24,7 +24,22 @@
   text-align: center;
   margin-bottom: 50px;
   justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -8px;
+  align-content: space-between;
+  margin-bottom: 40px;
+
+  @media screen and(min-width:768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and(min-width:1200px) {
+    margin-bottom: 50px;
+  }
 }
+
 .portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -34,6 +49,10 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 .portfolio-list__item-text {
   padding-top: 20px;
@@ -42,14 +61,17 @@
   padding-right: 24px;
   border: 1px solid #eeeeee;
   border-width: 0px 1px 1px 1px;
+  flex-grow: 1;
 }
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
-.portfolio-list__item {
+/* {
   background: var(--main-title-color);
   box-sizing: border-box;
   flex-basis: calc(100% / 3 - 30px);
@@ -59,10 +81,39 @@
   &:hover .portfolio-list__top-text,
   &:focus .portfolio-list__top-text {
     transform: translateY(0);
+  } */
+.portfolio-list__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    background: var(--main-title-color);
+    box-sizing: border-box;
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: transform var(--ms--cubic);
+    &:hover .portfolio-list__top-text,
+    &:focus .portfolio-list__top-text {
+      transform: translateY(0);
+    }
+  }
+  @media screen and(min-width:1200px) {
+    background: var(--main-title-color);
+    box-sizing: border-box;
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: transform var(--ms--cubic);
+    &:hover .portfolio-list__top-text,
+    &:focus .portfolio-list__top-text {
+      transform: translateY(0);
+    }
   }
 }
 
 .portfolio-list__link {
+  text-decoration: none;
   display: block;
   transition: box-shadow var(--ms--cubic), transform var(--ms--cubic);
   &:hover,
@@ -73,6 +124,11 @@
   &:hover .portfolio-list__top-text,
   &:focus .portfolio-list__top-text {
     transform: translateY(0);
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
 

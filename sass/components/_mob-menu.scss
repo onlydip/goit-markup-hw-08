@@ -40,12 +40,9 @@
     width: 100vw;
     height: 110vh;
     background-color: #fff;
-
     display: flex;
     flex-direction: column;
-
     align-items: flex-start;
-
     z-index: 999;
     transform: translateX(105%);
     transition: color var(--ms--cubic);
@@ -99,19 +96,17 @@
   text-decoration: none;
   font-family: Roboto;
   font-size: 40px;
-  font-weight: 500w;
+  font-weight: 500;
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--second-tittle-color);
-
   transition: color var(--ms--cubic);
-
   &:hover,
   &:focus {
     color: var(--main-button-color);
   }
 }
-.mob-navigation__link--curent {
+.mob-navigation__link--current {
   color: var(--main-button-color);
 }
 // .mob-menu__contacts {
@@ -161,9 +156,6 @@
   display: flex;
 
   flex-wrap: wrap;
-
-  & {
-  }
 }
 .mob-social__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
