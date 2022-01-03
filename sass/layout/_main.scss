@@ -1,7 +1,14 @@
 .main {
   padding-bottom: 94px;
 }
-
+.work {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+  }
+}
 .main__title {
   font-weight: 700;
   font-size: 36px;

@@ -24,14 +24,12 @@
   </head>
   <body>
     <!-- Шапка страницы -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
+        <a class="header-logo logos link" href="./index.html"
+          >Web<span class="header-logos logos link">Studio</span></a
+        >
         <nav class="header-nav">
-          
-          <a class="header-logo logos link" href="./index.html"
-            >Web<span class="header-logos logos link">Studio</span></a
-          >
-         
           <ul class="header-list list">
             <li class="header-list__item">
               <a class="links link active current" href="./index.html">Студия</a>
@@ -47,7 +45,7 @@
 
         <ul class="header-contacts list">
           <li class="header-contacts__item">
-            <a class="header-contacts__mail links link" href="mailto:info@devstudio.com">
+            <a class="contacts__item link-one link" href="mailto:info@devstudio.com">
               <svg class="header-social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
@@ -56,7 +54,7 @@
           </li>
 
           <li class="header-contacts__item">
-            <a class="header-contacts__tel links link" href="tel:+380961111111"
+            <a class="contacts__item link-two link" href="tel:+380961111111"
               ><svg class="header-social-icon" width="20" height="20">
                 <use href="./images/icons.svg#icon-telephone"></use>
               </svg>
@@ -64,17 +62,89 @@
             >
           </li>
         </ul>
+        <button
+          class="mob-menu__btn mob-menu__btn--open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="open-btn__svg"
+            width="20"
+            height="20"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="open-btn_icon mob-menu__icon"
+              href="./images/menu-icon/symbol-defs.svg#icon-menu"
+            ></use>
+          </svg>
+        </button>
+        <div class="mob-menu__container js-menu-container" id="mobile-menu">
+          <div class="mobile__container">
+            <button class="mob-menu__btn mob-menu__btn--close js-close-menu">
+              <svg class="close-btn__svg" width="20" height="20">
+                <use
+                  class="close-btn__icon mob-menu__icon"
+                  href="./images/menu-icon/symbol-defs.svg#icon-close"
+                ></use>
+              </svg>
+            </button>
+            <div class="mob-menu__box">
+              <ul class="mob-navigation__list">
+                <li class="mob-navigation__item">
+                  <a class="mob-navigation__link mob-navigation__link--curent" href="./index.html"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mob-navigation__item">
+                  <a class="mob-navigation__link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mob-navigation__item">
+                  <a class="mob-navigation__link" href="">Контакты</a>
+                </li>
+              </ul>
+              <div class="mob-menu__contacts">
+                <ul class="mob-contact__list">
+                  <li class="mob-contact__item">
+                    <a class="mob-contact__link mob-contact__link--color" href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                  <li class="mob-contact__item">
+                    <a class="mob-contact__link" href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="mob-social__list">
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">Instagram</a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">Twitter</a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">Facebook</a>
+                  </li>
+                  <li class="mob-social__item">
+                    <a href="" class="mob-social__link">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
     <!-- Главный контент страницы-->
     <main>
       <!-- Основа-->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__item">эффективное решение для вашего бизнеса</h1>
           <button class="btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
-      </section> -->
+      </section>
 
       <section class="hang">
         <div class="container">
@@ -128,25 +198,67 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="main">
+      <section class="main work">
         <div class="container">
           <h2 class="main__title">Чем мы занимаемся</h2>
           <ul class="main-list list">
             <li class="main__item">
-              <img src="./images/img1.jpg" alt="Рабочее пространство" width="370" />
+              <picture>
+                <source
+                  srcset="./images/work/img-desktop@1x.jpg 1x, ./images/work/img-desktop@2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img
+                  class="work__image"
+                  width="370"
+                  height="294"
+                  src="./images/work/img-desktop@1x.jpg"
+                  alt="кодирование"
+                />
+              </picture>
               <p class="main__text">Десктопные приложения</p>
             </li>
             <li class="main__item">
-              <img src="./images/img2.jpg" alt="Рабочее пространство" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/img1-desktop@1x.jpg 1x,
+                    ./images/work/img1-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  class="work__image"
+                  width="370"
+                  height="294"
+                  src="./images/work/img1-desktop@1x.jpg"
+                  alt="сервис"
+                />
+              </picture>
               <p class="main__text">Мобильные приложения</p>
             </li>
             <li class="main__item">
-              <img src="./images/img3.jpg" alt="Рабочее пространство" width="370" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/img2-desktop@1x.jpg 1x,
+                    ./images/work/img2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <img
+                  class="work__image"
+                  width="370"
+                  height="294"
+                  src="./images/work/img2-desktop@1x.jpg"
+                  alt="дизайн"
+                />
+              </picture>
               <p class="main__text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <section class="team section">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
@@ -590,5 +702,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

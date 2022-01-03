@@ -1,6 +1,7 @@
 @import './utils/vars';
 @import './base/reset';
 @import './utils/hidden';
+/* @import './utils/mixin'; */
 @import './base/common';
 
 @import './components/container';
@@ -9,6 +10,7 @@
 @import './components/logo';
 @import './components/current';
 @import './components/modal';
+@import './components/mob-menu';
 
 @import './layout/header';
 @import './layout/hero';
