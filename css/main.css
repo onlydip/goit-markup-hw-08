@@ -275,6 +275,7 @@ body {
 
 .modal-form-checkbox {
   margin-bottom: 30px;
+  display: inline-block;
 }
 
 .modal-form-field-input {
@@ -369,39 +370,33 @@ body {
   margin-left: 10px;
 }
 
-.modal-check-text {
-  display: i;
+/* .modal-check-text {
+  display: flex;
   align-items: center;
   height: 15px;
   text-align: center;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  width: 100%;
-}
-
-@media screen and (min-width: 1200px) {
-  .modal-check-text {
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
     justify-content: center;
     align-items: center;
     height: 24px;
   }
-}
-
+} */
 .modal-check-text {
   font-size: 12px;
   color: var(--first-text-color);
-  display: flex;
   /*  position: relative; */
+  display: flex;
   align-items: center;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  justify-content: center;
-  align-items: center;
+  height: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
+  /* letter-spacing: 0.03em; */
   /* height: 24px; */
 }
 
@@ -409,9 +404,10 @@ body {
   width: 16px;
   height: 15px;
   border: 2px solid #000000;
-  margin-right: 8px;
+  /* margin-right: 8px;
+    margin-top: 8px; */
   border-radius: 2px;
-  display: flex;
+  padding-bottom: 5px;
   align-items: center;
   justify-content: center;
 }
@@ -423,6 +419,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 24px;
+    text-align: center;
   }
 }
 
@@ -547,11 +544,12 @@ body {
     align-items: flex-start;
     z-index: 999;
     transform: translateX(105%);
-    transition: color var(--ms--cubic);
+    transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 .mob-menu__container.is-open {
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(0);
   opacity: 1;
   visibility: visible;
@@ -667,7 +665,7 @@ body {
 
 .mob-social__list {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .mob-social__item:not(:last-child) {
@@ -692,6 +690,12 @@ body {
 
 .mob-social__link:hover, .mob-social__link:focus {
   color: var(--primary-text-color);
+}
+
+@media screen and (max-width: 480px) {
+  .mob-social__link {
+    font-size: 3vw;
+  }
 }
 
 .mob-social__link--after::after {
@@ -1842,6 +1846,10 @@ body {
     flex-direction: column;
     height: 100%;
   }
+}
+
+.card__image {
+  width: 100%;
 }
 
 .portfolio-list__tittle {

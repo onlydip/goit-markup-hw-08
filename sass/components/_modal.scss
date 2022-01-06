@@ -65,6 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   &:hover,
   &:focus {
     fill: var(--main-button-color);
@@ -82,6 +83,7 @@
 }
 .modal-form-checkbox {
   margin-bottom: 30px;
+  display: inline-block;
 }
 .modal-form-field-input {
   margin-bottom: 20px;
@@ -169,15 +171,14 @@
   margin-left: 10px;
 }
 
-.modal-check-text {
-  display: i;
+/* .modal-check-text {
+  display: flex;
   align-items: center;
   height: 15px;
   text-align: center;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  width: 100%;
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
@@ -185,27 +186,27 @@
     align-items: center;
     height: 24px;
   }
-}
+} */
 .modal-check-text {
   font-size: 12px;
   color: var(--first-text-color);
-  display: flex;
   /*  position: relative; */
+  display: flex;
   align-items: center;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  justify-content: center;
-  align-items: center;
+  height: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
+  /* letter-spacing: 0.03em; */
   /* height: 24px; */
   span {
     width: 16px;
     height: 15px;
     border: 2px solid #000000;
-    margin-right: 8px;
+    /* margin-right: 8px;
+    margin-top: 8px; */
     border-radius: 2px;
-    display: flex;
+    padding-bottom: 5px;
     align-items: center;
     justify-content: center;
   }
@@ -215,6 +216,7 @@
     justify-content: center;
     align-items: center;
     height: 24px;
+    text-align: center;
   }
 }
 
@@ -276,6 +278,5 @@
   border: 2px solid var(--main-button-color);
   border-radius: 2px;
   margin-right: 8px;
-
   transition: background-color 250ms var(--ms--cubic), border-color 250ms var(--ms--cubic);
 }
