@@ -46,6 +46,7 @@
 
   @media screen and(max-width:480px) {
     font-size: 4vw;
+    font-weight: bold;
   }
 
   @media screen and(min-width:1200px) {
@@ -167,22 +168,42 @@
 .input-btn-icon {
   margin-left: 10px;
 }
+
 .modal-check-text {
-  font-size: 14px;
+  display: i;
+  align-items: center;
+  height: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+  }
+}
+.modal-check-text {
+  font-size: 12px;
   color: var(--first-text-color);
   display: flex;
-  position: relative;
+  /*  position: relative; */
   align-items: center;
   font-style: normal;
   font-weight: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
   justify-content: center;
+  align-items: center;
+  /* height: 24px; */
   span {
     width: 16px;
     height: 15px;
     border: 2px solid #000000;
-    margin-right: 5px;
+    margin-right: 8px;
     border-radius: 2px;
     display: flex;
     align-items: center;
@@ -198,7 +219,7 @@
 }
 
 .modal-important-text {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--main-button-color);
   font-style: normal;
   font-weight: normal;
@@ -229,15 +250,23 @@
   }
 }
 
-.modal-check-text {
+/* .modal-check-text {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 15px;
-  font-size: 14px;
-  line-height: 1.71;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-}
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    display: flex;
+  }
+} */
 .border-checkbox {
   display: flex;
   justify-content: center;
